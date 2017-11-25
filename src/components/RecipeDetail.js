@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button, Glyphicon } from 'react-bootstrap';
 
 export default class RecipeDetail extends React.Component {
 
@@ -13,11 +14,15 @@ export default class RecipeDetail extends React.Component {
                 <td>{recipe.category}</td>
                 <td>
                     <a href={'/recipe-edit/' + recipe.id}>
-                        edit
+                        <Button bsSize="xsmall">
+                        edit <Glyphicon glyph="edit" />
+                        </Button>
                     </a>
                 </td>
                 <td>
-                    <buton data-id={recipe.id}>delete</buton>
+                    <Button bsSize="xsmall" data-id={recipe.id} data-recipeName={recipe.recipeName}>
+                        delete <Glyphicon glyph="remove-circle" />
+                    </Button>
                 </td>
 
             </tr>

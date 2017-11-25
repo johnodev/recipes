@@ -5,7 +5,9 @@ export default class App extends React.Component {
     render() {
 
         return (
-            <RecipeList/>
+            <div class="container">
+                <RecipeList/>
+            </div>
         );
     }
 }
